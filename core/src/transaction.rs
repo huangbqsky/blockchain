@@ -1,15 +1,16 @@
 use serde::Serialize;
 use utils::serializer::{serialize, hash_str};
 
+// 交易体
 #[derive(Serialize, Debug, Clone)]
 pub struct Transaction {
-    pub nonce: u64,
-    pub amount: u64,
-    pub fee: u64,
-    pub from: String,
-    pub to: String,
-    pub sign: String,
-    pub hash: String,
+    pub nonce: u64, // 交易记录值
+    pub amount: u64, // 交易金额
+    pub fee: u64, // 交易手续费
+    pub from: String, // 交易双方from来源方地址
+    pub to: String, // 交易双方的to接收方地址
+    pub sign: String, // 标记一些具体信息
+    pub hash: String, //整个交易的哈希值
 }
 
 impl Transaction {

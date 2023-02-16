@@ -4,9 +4,11 @@ use leveldb::options::{Options, WriteOptions};
 use utils::bkey;
 use std::{env, fs};
 
+// 区块链数据库
 pub struct BlockChainDb;
 
 impl BlockChainDb {
+    // 新建并返回数据库
     pub fn new(path: &str) -> Database<bkey::BKey> {
         let mut dir = env::current_dir().unwrap();
         dir.push(path);
@@ -26,6 +28,7 @@ impl BlockChainDb {
         database
     }
 
+    // 数据写入数据库
     pub fn write_db(db: &mut Database<bkey::BKey>, key: bkey::BKey, val: &[u8]) {
         let write_opts = WriteOptions::new();
         match db.put(write_opts, key, &val) {

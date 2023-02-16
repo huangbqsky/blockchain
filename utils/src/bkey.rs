@@ -2,6 +2,7 @@ use bigint::U256;
 use db_key::Key;
 use std::mem::transmute;
 
+// 定义大 Key
 #[derive(Debug, Copy, Clone, Eq, PartialEq, Ord, PartialOrd)]
 pub struct BKey {
     pub val: U256,
