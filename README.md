@@ -4,7 +4,7 @@
 
 A very simple blockchain in Rust.
 
-➜ caogo run 
+➜➜➜ cargo run 
 
     -------------------------Mine Info----------------------------
     Start genesis mining .... 
