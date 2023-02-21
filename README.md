@@ -1,6 +1,6 @@
-### Description
+### Description 
 
-#Rust-in-Blockchain
+Rust-in-Blockchain
 
 A very simple blockchain in Rust.
 
